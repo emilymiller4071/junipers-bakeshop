@@ -40,79 +40,92 @@ ul, li, a {
     justify-content: space-around;
     flex: 1;
     align-items: center;
-    font-family: 'Segoe UI';
+    /* font-family: 'Segoe UI'; */
     font-weight: 700;
     font-size: 30px;
     
 }
 
+.button-bar-wrap {
+    flex: 1;
+    height: 950px;
+    
+}
+
 .button-bar {
-    flex: 2;
-    background-color: rgba(79, 248, 191, .45);
-    min-height: 950px; /* or any other value you prefer */
-    display: flex; /* set flexbox properties to display its child elements */
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    background-color: rgba(79, 248, 191, .45);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* justify-content: center; */
     align-items: center;
+    border: dotted 5px rgb(0, 255, 255);
     border-bottom-left-radius: 85px;
     border-top-left-radius: 85px;
-    /* padding-top: 2rem;
-    padding-bottom: 3rem; */
+    height: 100%;
   }
+
+#one{
+    margin-bottom: 10px;
+}
+
+#two {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#three {
+    margin-top: 10px;
+}
 
 .button-bar > a {
     border-bottom-left-radius: 85px;
-    border-top-left-radius: 85px;
-    flex-shrink:inherit;
-    text-orientation:sideways-right;
+    border-top-left-radius: 85px;   
 }
 
 
 .main-box {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    min-height: 950px;
-    margin: 10px;
+    margin: 20px;
     align-items: center;
+    height: 950px;
+    gap: 10px;
 }
 
 .transbox {
-    margin:10px;
+    
     background-color: rgba(250, 235, 215, .5);
     flex: 5;
     align-items: center;
     text-align: center;
-    padding-bottom: 80px;
-    min-height: 900px;
     border-style: dotted;
+    border-width: 5px;
     border-color: antiquewhite;
-    height:950px;
+    height: 100%;
 }
 
 .home-paragraph {
     font-size: 30px;
     font-weight: 400;
-    font-family: 'Segoe UI';
     padding-left: 20px;
     padding-right: 20px; 
 }
 
 .aside {
     
-    background-color: rgba(255, 112, 52, .5);
+    background-color: rgba(255, 112, 52, .25);
     display: flex;
     flex-direction: column;
     flex: 1;
-    /* min-height: 950px; */
     text-align: center;
-    padding-bottom: 20px;
-    padding-top: 10px;
     border-style: dotted;
+    border-width: 5px;
+    border-color: rgb(255, 112, 52);
     border-bottom-right-radius: 85px;
     border-top-right-radius: 85px;
-    border-color: brown;
-    height: 950px;
+    height: 100%;
     
 }
 
@@ -121,7 +134,8 @@ ul, li, a {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    /* padding-bottom: 10px; */
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .ad {
@@ -140,12 +154,9 @@ a {
     border-bottom-left-radius: 85px;
     border-top-right-radius: 85px;
     padding: 5px;
-    margin: 5px;
-   
 }
 
 a:hover {
-    color: rgb(210, 180, 140);
     background-color: rgba(242, 154, 154, 0.5);
 }
 
@@ -162,8 +173,6 @@ a:active {
 .choose {
     font-size: 4rem;
     color:rgb(98, 66, 25);
-    justify-self: center;
-    align-self: center;
     padding-top: 18rem;
 
 }
@@ -186,19 +195,40 @@ main > h1 {
     font-size: 40px;
 }
 
-/* .well {
-    font-size: 50px;
-    color:rgb(98, 66, 25);   
-} */
 
-/* aside > h1 {
-    font-size: larger;
-} */
 
 .spicy {
     color:rgb(160, 66, 26);
     font-weight: 700;
 }
+ 
+.button-bar-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.button-bar > a {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    align-items: center;
+    font-weight: 700;
+    font-size: 30px;
+    background-color: rgba(0, 255, 255, 0.5);
+}
+
+.button-bar > a:hover {
+    background-color: rgba(235, 112, 112, 0.5);
+    color:brown
+}
+
+.button-bar > p {
+    font-size: 1.5rem;
+}
   
-  
-  
+.ad-wrapper > p {
+   justify-self: flex-end;
+}
