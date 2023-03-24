@@ -1,0 +1,204 @@
+html {
+    background: url(../images/back.jpg) no-repeat center center fixed ;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    border: solid rgb(108, 83, 52) 2px;
+    border-bottom-left-radius: 85px;
+    border-top-right-radius: 85px;
+    
+}
+
+
+header > p {
+    text-align: center;
+    color: rgb(116, 93, 62);
+    font-family:'Segoe UI'; 
+    font-size:5rem;
+   
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    
+}
+
+
+ul, li, a {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    align-items: center;
+    font-family: 'Segoe UI';
+    font-weight: 700;
+    font-size: 30px;
+    
+}
+
+.button-bar {
+    flex: 2;
+    background-color: rgba(79, 248, 191, .45);
+    min-height: 950px; /* or any other value you prefer */
+    display: flex; /* set flexbox properties to display its child elements */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 85px;
+    border-top-left-radius: 85px;
+    /* padding-top: 2rem;
+    padding-bottom: 3rem; */
+  }
+
+.button-bar > a {
+    border-bottom-left-radius: 85px;
+    border-top-left-radius: 85px;
+    flex-shrink:inherit;
+    text-orientation:sideways-right;
+}
+
+
+.main-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 950px;
+    margin: 10px;
+    align-items: center;
+}
+
+.transbox {
+    margin:10px;
+    background-color: rgba(250, 235, 215, .5);
+    flex: 5;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 80px;
+    min-height: 900px;
+    border-style: dotted;
+    border-color: antiquewhite;
+    height:950px;
+}
+
+.home-paragraph {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Segoe UI';
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+
+.aside {
+    
+    background-color: rgba(255, 112, 52, .5);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* min-height: 950px; */
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border-style: dotted;
+    border-bottom-right-radius: 85px;
+    border-top-right-radius: 85px;
+    border-color: brown;
+    height: 950px;
+    
+}
+
+.ad-wrapper {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* padding-bottom: 10px; */
+}
+
+.ad {
+    flex: 1;
+    gap: 10px;
+    margin: 10px auto;
+    width: 90%;
+    padding-top: 50px;
+}
+
+a {
+    background-color: rgba(250, 235, 215, 0.5);
+    color: brown;
+    font-weight: 500;
+    border: solid 3px;
+    border-bottom-left-radius: 85px;
+    border-top-right-radius: 85px;
+    padding: 5px;
+    margin: 5px;
+   
+}
+
+a:hover {
+    color: rgb(210, 180, 140);
+    background-color: rgba(242, 154, 154, 0.5);
+}
+
+a:visited {
+    color: brown;
+}
+
+a:active {
+    background-color: rgb(255, 235, 205);
+    color:rgb(40, 113, 136);
+    border: solid rgb(184, 134, 11) 2px;
+}
+
+.choose {
+    font-size: 4rem;
+    color:rgb(98, 66, 25);
+    justify-self: center;
+    align-self: center;
+    padding-top: 18rem;
+
+}
+
+.everything {
+    color:rgb(160, 66, 26);
+    
+}
+
+.main-picture {
+    max-height: 500px;
+}
+
+.ad-label {
+    text-align: center;
+    align-items: flex-end;
+}
+
+main > h1 {
+    font-size: 40px;
+}
+
+/* .well {
+    font-size: 50px;
+    color:rgb(98, 66, 25);   
+} */
+
+/* aside > h1 {
+    font-size: larger;
+} */
+
+.spicy {
+    color:rgb(160, 66, 26);
+    font-weight: 700;
+}
+  
+  
+  

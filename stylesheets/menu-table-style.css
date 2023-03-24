@@ -1,0 +1,46 @@
+.menu-type {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    border: none;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    width: 100%;
+}
+
+td, th {
+    border: none;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+th {
+    background-color: rgba(221, 149, 48, .5);
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+
+td {
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 4rem;
+    font-weight: 400;
+}
+
+.price {
+    text-align: right;
+}
+
+.dish {
+    text-align: left;
+}
+
