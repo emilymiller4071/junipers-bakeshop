@@ -43,6 +43,20 @@ a {
     padding: 5px;
 }
 
+a:hover {
+    background-color: rgba(242, 154, 154, 0.5);
+}
+
+a:visited {
+    color: brown;
+}
+
+a:active {
+    background-color: rgb(255, 235, 205);
+    color:rgb(40, 113, 136);
+    border: solid rgb(184, 134, 11) 2px;
+}
+
 .nav-list {
     display: flex;
     justify-content: space-evenly;
