@@ -44,3 +44,22 @@ td {
     text-align: left;
 }
 
+.order-button{
+    width: 150px;
+    height: 30px;
+    border-bottom-left-radius: 85px;
+    border-top-right-radius: 85px;
+    color: brown;
+    background-color: rgba(221, 149, 48, .5);
+    border: solid 1px rgb(165, 42, 42);
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgba(242, 154, 154, 0.555);
+}
+
+button:active {
+    background-color: rgba(236, 222, 201, 0.562);
+    color:rgba(165, 42, 42, 0.411)
+}

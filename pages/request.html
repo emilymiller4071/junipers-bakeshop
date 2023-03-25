@@ -1,46 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../stylesheets/home-style.css">
+    <link rel="stylesheet" href="../stylesheets/request-style.css">
+    <link rel="preconnect" href="../https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
-    <title>About</title>
+    <title>Requests</title>
+
 </head>
-<header>
-    Header
-</header>
-<nav>
-    <ul>
-        <li>
-            <a href="../index.html">Home</a>
-        </li>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-        <li>
-            <a href="menu.html">Menu</a>
-        </li>
-        <li>
-            <a href="recipes.html">Recipes</a>
-        </li>
-        <li>
-            <a href="request.html">Request</a>
-        </li>
-    </ul>
-</nav>
-<body>
-    <main>
-        Main
-    </main>
 
-    <aside>
-        Aside
-    </aside>
+    <div class="header-wrapper">
 
+        <header>
+            <p>What would you like to request?</p>
+
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="request.html">Request</a></li>
+                </ul>
+            </nav>  
+        </header>
+    </div> 
+
+    <body>
+        <div class="main-box">
+            
+            <div class="transbox">
+                <main>
+                    <h1>Let us know what we can make for you!</h1>
+                    
+                    <form action="mailto:juniper@junipersbakeshop.com?subject=Baked%20Goods%20Request" method="POST">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName"/>
+                        <br><br>
+
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName"/>
+                        <br><br>
+
+                        <label for="email">Email Address</label>
+                        <input type="text" id="email" name="email"/>
+                        <br><br>
+                        
+                        <label for="">Requested Menu Item</label>
+                        <select name="menu-choice" id="menu-choice">
+                            <option id="croissanwich" value="Croissanwich">Croissanwich</option>
+                            <option id="biscuits" value="Biscuits Au Poivre">Biscuits Au Poivre</option>
+                            <option id="salmon" value="Salmon Oscar">Salmon Oscar</option>
+                            <option id="tartlet" value="Seasonal Tartlets">Seasonal Tartlets</option>
+                            <option id="profiteroles" value="Profiteroles">Profiteroles</option>
+                            <option id="baklava" value="Baklava">Baklava</option>
+                            <option id="tiramisu" value="Tiramisu">Tiramisu</option>
+                            <option id="macarons" value="Macarons">Macarons</option>
+                            <option id="pudding" value="Bread Pudding">Bread Pudding</option>
+                        </select>
+
+                        <!--Below is another menu-option box with which i can fill in the fields with js-->
+                        <div class="menu-option">
+                            <img class="dish-image" src=""/>
+                            <p class="dish"></p>
+                        </div> 
+
+                        <input type="submit" id="submit" name="submit"/>
+                    </form> 
+                
+                </main>
+            </div> <!--end transbox-->
+            
+
+            <div class="aside">
+                <aside class = "ad-wrapper">
+                
+                    <img class="ad" src="../images/weightWatchers.jfif" alt="Weight Watchers">
+                    <img class="ad" src="../images/wholeFoods.jfif" alt="Whole Foods Market">
+                    <img class="ad" src="../images/fitness.jfif" alt="Planet Fitness">
+                    <img class="ad" src="../images/donut-ad.jfif" alt="Dunkin Donuts">
+                    <p class="ad-label">Advertisements</p>
+                </aside>
+            </div> <!--end aside-->
+        
+        </div> <!--end main-box-->
+    
+    
+        <footer>
+            <p>Juniper Eve | 2023</p>
+        </footer>
+    
+    
+    
+    <script>
+        window.addEventListener("DOMContentLoaded", function(e) {
+            const order = localStorage.getItem("order");
+
+            if(order) { //see if object has value
+                const bakeryRequest = JSON.parse(order); // turn the json string into object
+                const menuOption = document.querySelector(".menu-option"); // get the element that contains the image and title of our baked good
+
+                const dish = menuOption.querySelector(".dish"); // get the description of element
+                dish.innerText = bakeryRequest.title; //update it to the value of the request item
+
+                const choiceId = bakeryRequest.id; // get the id of the choice
+                const dropdownChoices = document.querySelectorAll("option"); // get all of the existing options
+                dropdownChoices.forEach(function(dropdownChoice) {
+                    if (dropdownChoice.id === choiceId) {
+                        dropdownChoice.selected = true; // if this is the same id as what we selected on the last page
+                    }
+                });
+
+                const img = menuOption.querySelector("img");
+                img.setAttribute("src", `../images/${choiceId}.jpg`); // NOTE: the image names need to match the IDs
+                img.setAttribute("alt", bakeryRequest.title);
+
+            }
+
+            // I need an event listener for when the dropdown changes{
+                
+               menuOption.addEventListener('change', (e) => {
+                console.log(`e.target.value = ${e.target.value}`);
+                console.log(`menuOption.options[menuOption.selectedIndex].value = ${menuOption.options[menuOption.selectedIndex].value}`);
+               })
+                //get the menu option box so I can change the image and description within it
+                // get the currently selected dropdown choice
+                // now we will actually change the values
+           //}
+            
+        });
+
+   
+    </script>
 </body>
-<footer>
-    Juniper Eve | 2023</footer>
 </html>
+

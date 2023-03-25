@@ -10,14 +10,14 @@ html {
 header {
     display: flex;
     flex-direction: column;
-    border: solid rgb(108, 83, 52) 2px;
+    border: solid rgb(236, 230, 222) 2px;
     border-bottom-left-radius: 85px;
     border-top-right-radius: 85px;  
 }
 
 header > p {
     text-align: center;
-    color: rgb(116, 93, 62);
+    color: rgb(216, 205, 192);
     font-family:'Segoe UI'; 
     font-size:5rem;
 }
@@ -31,6 +31,16 @@ ul, li, a {
     align-items: center;
     font-weight: 700;
     font-size: 30px; 
+}
+
+a {
+    background-color: rgba(250, 235, 215, 0.5);
+    color: brown;
+    font-weight: 500;
+    border: solid 3px;
+    border-bottom-left-radius: 85px;
+    border-top-right-radius: 85px;
+    padding: 5px;
 }
 
 .nav-list {
@@ -68,7 +78,7 @@ ul, li, a {
     align-items: center;
     text-align: center;
     border-style: dotted;
-    border-width: 5px;
+    border-width: 4px;
     border-color: antiquewhite;
     height: 100%;
 }
@@ -115,6 +125,7 @@ ul, li, a {
 .ad-label {
     text-align: center;
     align-items: flex-end;
+    font-size: 20px;
 }
 
 .ad-wrapper > p {
@@ -132,4 +143,11 @@ main > h1 {
 .spicy {
     color:rgb(160, 66, 26);
     font-weight: 700;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
 }

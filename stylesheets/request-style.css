@@ -1,0 +1,54 @@
+
+    label {
+        color: rgb(61, 56, 53);
+        font-weight: bold;
+        font-size: 25px;
+        width: 200px;
+        float: left;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        
+      }
+      label:after { content: ": " }
+
+      
+      form {
+        width: 800px;
+      }
+      
+      input {
+        padding: 3px;
+        box-shadow: 3px 3px 5px rgba(16, 138, 160, 0.425);
+        background-color: rgba(250, 235, 215, 0.699);
+        border-color: brown;
+        font-size: 14px;
+        font-weight: 600;
+        width: 400px;
+        float: left;
+        /* margin-top:40px; */
+      }
+
+      select {
+        float: left;
+        background-color: rgba(250, 235, 215, 0.699);
+        font-size: 20px;
+      }
+
+      #submit {
+        background-color: rgba(16, 138, 160, 0.425);
+        margin: 40px;
+        border-top-right-radius: 85px;
+        border-bottom-left-radius: 85px;
+        width: 150px;
+      }
+
+     .dish-image {
+        height: 200px;
+        margin-top:auto;
+        
+      }
+
+      form {
+        display: inline-block;
+      }

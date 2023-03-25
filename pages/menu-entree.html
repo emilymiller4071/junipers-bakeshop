@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/home-style.css">
     <link rel="stylesheet" href="../stylesheets/menu-style.css">
     <link rel="stylesheet" href="../stylesheets/menu-table-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,32 +53,46 @@
 
                            <h1 class="menu-type">Entrees</h1>
 
-                           <table>
-                                <tr>
-                                    <th class="dish" colspan="4">Croissanwich</th>
-                                    <th class="price" colspan="3">7</th>
-                                </tr>
-                                    <td class="description" colspan="4">Flaky croissant, smoked turkey,
-                                        gruyere,<br>creamy dijon aoli, mixed greens
-                                    </td>
-                                
-                                <tr>
-                                    <th class="dish" colspan="4">Biscuits Au Poivre</th>
-                                    <th class="price" colspan="3">15</th>
-                                </tr>
-                                    <td class="description" colspan="4">Fresh biscuits, filet mignon strips, creamy<br>
-                                        peppercorn sauce
-                                    </td>
+                           <div class="menu">
+                                <table>
 
+                                    <div id="croissanwich" class="menu-option">
+                                        <tr>
+                                            <!-- <th class="dish" colspan="4">Croissanwich</th> -->
+                                            <th colspan="4"><p class="dish">Croissanwich</p></th>
+                                            <th class="price" colspan="3">7</th>
+                                        </tr>
+                                            <td class="description" colspan="4">Flaky croissant, smoked turkey,
+                                                gruyere,<br>creamy dijon aoli, mixed greens<br><br>
+                                                <button data-order="croissanwich" class="order-button">Order</button></td>
+                                            </td>
+                                            <td>
+                                    </div>  
                                     
-                                <tr>
-                                    <th class="dish" colspan="4">Salmon Oscar</th>
-                                    <th class="price" colspan="3">Market</th>
-                                </tr>
-                                    <td class="description" colspan="4">Market fresh salmon filet, broiled asparagus,<br>
-                                            shredded crab meat, housemade bearnaise sauce
-                                    </td>
-                           </table>
+                                    <div id="biscuits" class="menu-option">
+                                        <tr>
+                                            <th class="dish" colspan="4">Biscuits Au Poivre</th>
+                                            <th class="price" colspan="3">15</th>
+                                        </tr>
+                                            <td class="description" colspan="4">Fresh biscuits, filet mignon strips, creamy<br>
+                                                peppercorn sauce<br><br>
+                                                <button data-order="biscuits" class="order-button">Order</button></td>
+                                            </td>
+                                    </div>        
+                                      
+                                    <div id="salmon" class="menu-option">
+                                        <tr>
+                                            <th class="dish" colspan="4">Salmon Oscar</th>
+                                            <th class="price" colspan="3">Market</th>
+                                        </tr>
+                                            <td class="description" colspan="4">Market fresh salmon filet, broiled asparagus,<br>
+                                                    shredded crab meat, housemade bearnaise sauce<br><br>
+                                                    <button data-order="salmon" class="order-button">Order</button></td>
+                                            </td>
+                                    </div>
+
+                                </table>
+                            </div>
 
                         </div>
 
@@ -100,8 +115,56 @@
 
 
         </div> <!--end main-box-->
+    
+    
+        <footer>
+            Juniper Eve | 2023
+        </footer>
+    
+        <script>
+            // create eventListener that listens for the page to load
+            window.addEventListener("DOMContentLoaded", function(e){
+                console.log("The page loaded");
+
+                // get a const of the order button
+                const orderButtons = document.querySelectorAll("button[data-order]");
+
+                // create a foreach loop for each button
+                orderButtons.forEach(function(btn){
+                    //listen for click
+                    btn.addEventListener("click", function(e) {
+                        console.log("button clicked");
+                        // get the current target and container
+                        const btn = e.currentTarget;
+                        const container = btn.parentNode;
+                        // const price = container.querySelector(".price").innerText;
+                        const price = document.getElementsByClassName(".price").innerText;
+
+                        // create an order object
+                        const order = {
+                            id: btn.getAttribute("data-order"),
+                            // title: container.querySelector(".dish").innerText,
+                            title: document.getElementsByClassName(".dish").innerText,
+                            price: `$${price}`
+                            // price: "$7.00"
+                        };
+
+                        // save to local storage
+                        localStorage.setItem("order", JSON.stringify(order));
+
+                        //switch to a new page
+                        const url = window.location.href.replace("menu-entree", "request");
+                        window.location.href = url;
+
+
+                    });
+
+
+                });
+            });
+            
+
+        </script>
+
     </body>
->
-<footer>
-    Juniper Eve | 2023</footer>
 </html>
