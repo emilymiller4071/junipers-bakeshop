@@ -142,7 +142,9 @@
                 const menuOption = document.querySelector(".menu-option"); // get the element that contains the image and title of our baked good
 
                 const dish = menuOption.querySelector(".dish"); // get the description of element
-                dish.innerText = bakeryRequest.title; //update it to the value of the request item
+                dish.getElementsByClassName(".dish").innerText = bakeryRequest.title; //update it to the value of the request item
+
+                
 
                 const choiceId = bakeryRequest.id; // get the id of the choice
                 const dropdownChoices = document.querySelectorAll("option"); // get all of the existing options
