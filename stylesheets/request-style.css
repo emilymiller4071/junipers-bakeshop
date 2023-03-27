@@ -7,25 +7,27 @@
         float: left;
         margin-right: 10px;
         margin-left: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         
       }
       label:after { content: ": " }
 
       
       form {
-        width: 800px;
+        width: 650px;
+         */
+        
       }
       
       input {
-        padding: 3px;
+        margin-bottom: 20px;
         box-shadow: 3px 3px 5px rgba(16, 138, 160, 0.425);
         background-color: rgba(250, 235, 215, 0.699);
         border-color: brown;
         font-size: 14px;
         font-weight: 600;
         width: 400px;
-        float: left;
+        float: right;
         /* margin-top:40px; */
       }
 
@@ -33,6 +35,10 @@
         float: left;
         background-color: rgba(250, 235, 215, 0.699);
         font-size: 20px;
+        width: 400px;
+        box-shadow: 3px 3px 5px rgba(16, 138, 160, 0.425);
+        background-color: rgba(250, 235, 215, 0.699);
+        border-color: brown;
       }
 
       #submit {
@@ -44,11 +50,35 @@
       }
 
      .dish-image {
-        height: 200px;
-        margin-top:auto;
+        height: 150px;
+        margin-top:50px;
         
       }
 
-      form {
-        display: inline-block;
-      }
+      .request-box {
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+        align-items: left;
+        height: 950px;
+        gap: 10px;
+    }
+
+    .background-box { 
+      background-color: rgba(250, 235, 215, .5);
+      flex: 5;
+      align-items: center;
+      text-align: left;
+      border-style: dotted;
+      border-width: 4px;
+      border-color: antiquewhite;
+      height: 100%;
+  }
+  table {
+    width: 600px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
