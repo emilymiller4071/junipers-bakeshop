@@ -20,7 +20,7 @@
     height: 100%;
 }
 
-td {
+.ingredients {
     width: 250px;
     text-align: left;
     padding-bottom: 5px;
@@ -41,6 +41,29 @@ th {
     padding-bottom: 20px;
 }
 
-.directions {
+#one {
     text-align: left;
+    width:450px;
+    padding-top: 50px;
+    font-size: 17px;
+}
+
+#two {
+    text-align: left;
+    width:450px;
+    padding-top: 80px;
+    font-size: 17px;
+}
+
+#three {
+    text-align: left;
+    width:450px;
+    padding-top: 100px;
+    font-size: 17px;
+}
+
+.numbering {
+    width: 50px; 
+    font-size: 18px;
+    padding-top: 20px;
 }
